@@ -23,7 +23,7 @@ const timer = (selector, deadline) => {
 
     }
     function initializeClock(id, end) {
-        const clock = document.getElementById(id);
+        const clock = document.querySelector(id);
         const daysSpan = clock.querySelector('#days');
         const hoursSpan = clock.querySelector('#hours');
         const minutesSpan = clock.querySelector('#minutes');
