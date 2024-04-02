@@ -30,6 +30,7 @@ const changeModalState = (state) => {
                     };
                 });
             });
+            console.log(state)
         }
 
         bindActionToElem('click', windowForm, 'form')

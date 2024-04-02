@@ -5,7 +5,7 @@ const forms = (state) => {
           inputs = document.querySelectorAll('input');
 
     
-    checkNumInpusts('input[name="user_phone"');
+    checkNumInpusts('input[name="user_phone"]');
 
     const message = {
         success: 'Success',

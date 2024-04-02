@@ -9,7 +9,7 @@ import imageModal from './modules/imageModal';
 window.addEventListener('DOMContentLoaded', () => {
     let modalState = {};
     let endtime = '2024-04-03';
-    changeModalState(modalState)
+    changeModalState(modalState);
 
     modals();
     tabs('.glazing_slider', '.glazing_block', '.glazing_content', 'active');
