@@ -1,14 +1,11 @@
-const forms = () => {
+import checkNumInpusts from "./checkNumInpusts";
+
+const forms = (state) => {
     const form = document.querySelectorAll('form'),
-          inputs = document.querySelectorAll('input'),
-          phoneInputs = document.querySelectorAll('input[name="user_phone"]');
+          inputs = document.querySelectorAll('input');
 
     
-    phoneInputs.forEach(el => {
-        el.addEventListener('input', () => {
-            el.value = el.value.replace(/\D/, '')
-        })
-    });
+    checkNumInpusts('input[name="user_phone"');
 
     const message = {
         success: 'Success',
@@ -42,6 +39,12 @@ const forms = () => {
             item.appendChild(statusMessage);
 
             const formData = new FormData(item);
+
+            if (item.classList.contains('popup_calc_end')) {
+                for (let k in state) {
+                    formData.append(k, state[k])
+                }
+            }
 
             postData('assets/server.php', formData)
                 .then(res => {
